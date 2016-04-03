@@ -35,10 +35,15 @@ $(document).ready(function () {
             $(this).addClass("active");
         }
         
+        $("#product-media").removeClass("fadeInLeft");
+        setTimeout(function(){
+            $("#product-media").addClass("fadeInLeft");
+        },200);
+        
         if(!$("#product-media").hasClass("fadeInLeft")){
             $("#product-media").addClass("fadeInLeft");
         }
-
+        
         var reelContainer = $("#product-image-reel");
         if(!$("#step-1").hasClass("active")){
             $("#step-1").addClass("active");
@@ -48,11 +53,8 @@ $(document).ready(function () {
             $("#product-image").removeClass("image-hidden");
             $("#step-images").addClass("image-hidden");
         }
-        
-        $("#product-media").removeClass("fadeInLeft");
-        setTimeout(function(){
-            $("#product-media").addClass("fadeInLeft");
-        },200)
+
+       
         
    });
 
