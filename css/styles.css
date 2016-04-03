@@ -61,7 +61,18 @@ nav.section-navigation .navigation ul li a.active{text-decoration: underline;col
 figure figcaption{padding-top:6px;font-size:8.59px;letter-spacing:2px;color:#333333;font-family: proxima-nova, sans-serif;font-weight: 700;border-top:2px solid #9fa491;text-align: right;margin-top: 20px;text-transform: uppercase;width: 158px;float:right}
 .product-view{position: relative;}
 .image-hidden{display: none !important;}
-
+.product-information .tab{
+     transition:  opacity 1s ease-out;
+     -webkit-transition:  opacity 1s ease-out;
+     opacity: 0;
+     height: 0;
+     overflow: hidden;
+     display: block;
+}
+.product-information .tab.active {
+    opacity: 1;
+    height: auto;
+}
 /*Responsive Fix*/
 @media (min-width:1200px) and (max-width:1250px){
     nav.main-navigation ul li{padding: 11px 30px 11px 30px;}
