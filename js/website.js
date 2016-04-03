@@ -48,9 +48,10 @@ $(document).ready(function () {
             $("#product-image").removeClass("image-hidden");
             $("#step-images").addClass("image-hidden");
         }
-        $("#product-media").addClass("fadeInLeft");
+        
+        $("#product-media").removeClass("fadeInLeft");
         setTimeout(function(){
-            $("#product-media").removeClass("fadeInLeft");
+            $("#product-media").addClass("fadeInLeft");
         },200)
         
    });
