@@ -99,13 +99,13 @@ $(document).ready(function () {
         $(this).addClass("active");
         
         $("#"+tabId).addClass("active");
-
+        var imageNumber = $(this).attr('data-number');
          var i=1;
          
          setTimeout(function(){ 
              $("#product-media").removeClass("fadeInLeft");
                 timer = setInterval(function(){ 
-                if(i<20){
+                if(i<=imageNumber){
                     $("#step-images").attr('src', 'images/'+folder+'/'+ i +'.jpg');
                 }
                 else{
@@ -113,7 +113,6 @@ $(document).ready(function () {
                     clearInterval(timer);
                     
                 }
-                
                 i++;
             }, 200);
         }, 1000);
