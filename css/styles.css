@@ -116,3 +116,9 @@ figure figcaption{padding-top:6px;font-size:8.59px;letter-spacing:2px;color:#333
     nav.section-navigation .navigation ul li{padding:9px 22px}
 
 }
+
+#product-media img {
+    margin-left: 10%;
+    max-width: 164%;
+    width: 85%;
+}
