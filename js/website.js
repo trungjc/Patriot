@@ -54,15 +54,32 @@ $(document).ready(function () {
             $("#step-images").addClass("image-hidden");
         }
 
-       
-        
    });
 
    
    var timer;
     $(".step-control ul li.static-images").click(function(event){
-        $("#step-images").attr('src', 'images/Center/1.jpg');
-       
+      $("#product-media").removeClass("fadeInLeft");
+       $("#product-media").addClass("fadeInLeft");
+       var tabId = $(this).attr('data-toggle');
+       var folder = "Step2";
+        
+         switch(tabId){
+           case "step-2":
+              folder = "Step2";
+              break;
+            case "step-3":
+              folder = "Step3";
+              break;
+            case "step-4":
+              folder = "Step4";
+              break;
+            case "step-5":
+              folder = "Step5";
+              break;
+
+         }
+         $("#step-images").attr('src', 'images/'+folder+'/1.jpg');
         if(timer){
             clearInterval(timer);
         }
@@ -72,19 +89,19 @@ $(document).ready(function () {
             $("#product-image").addClass("image-hidden");
             $("#step-images").removeClass("image-hidden");
         }
-        $("#product-media").addClass("fadeInLeft");
         $(".tab").removeClass("active");
         $(".step-control li").removeClass("active");
         $(this).addClass("active");
-        var tabId = $(this).attr('data-toggle');
+        
         $("#"+tabId).addClass("active");
 
          var i=2;
+         
          setTimeout(function(){ 
-            $("#product-media").removeClass("fadeInLeft");
+             $("#product-media").removeClass("fadeInLeft");
                 timer = setInterval(function(){ 
                 if(i<20){
-                    $("#step-images").attr('src', 'images/Center/'+ i +'.jpg');
+                    $("#step-images").attr('src', 'images/'+folder+'/'+ i +'.jpg');
                 }
                 else{
                     $("#product-media").removeClass("fadeInLeft");
