@@ -27,6 +27,11 @@ $(document).ready(function () {
             }
       ]
     });
+
+    setTimeout(function(){ 
+         $("#product-media").removeClass("fadeInLeft");
+              
+     }, 400);
    
    $("#step-control-1").click(function(){
         $(".tab").removeClass("active");
@@ -95,7 +100,7 @@ $(document).ready(function () {
         
         $("#"+tabId).addClass("active");
 
-         var i=2;
+         var i=1;
          
          setTimeout(function(){ 
              $("#product-media").removeClass("fadeInLeft");
